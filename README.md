@@ -1,6 +1,6 @@
 # Expense Tracker App
 
-A simple expense tracker app built with HTML5, CSS3, and vanilla JavaScript.
+A simple expense tracker app built with HTML5, CSS3, and JavaScript.
 
 ## Features
 
