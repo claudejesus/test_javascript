@@ -78,26 +78,19 @@ function editExpense(index) {
   deleteExpense(index);
 }
 
-// Filters
 function applyFilters() {
-  const start = document.getElementById('filter-start').value;
-  const end = document.getElementById('filter-end').value;
   const min = parseFloat(document.getElementById('filter-min').value);
   const max = parseFloat(document.getElementById('filter-max').value);
 
   filteredExpenses = expenses.filter(exp => {
-    const expDate = new Date(exp.date);
-    const inDateRange = (!start || expDate >= new Date(start)) && (!end || expDate <= new Date(end));
     const inAmountRange = (!min || exp.amount >= min) && (!max || exp.amount <= max);
-    return inDateRange && inAmountRange;
+    return inAmountRange;
   });
 
   renderExpenses();
 }
 
 function resetFilters() {
-  document.getElementById('filter-start').value = '';
-  document.getElementById('filter-end').value = '';
   document.getElementById('filter-min').value = '';
   document.getElementById('filter-max').value = '';
   filteredExpenses = [...expenses];
