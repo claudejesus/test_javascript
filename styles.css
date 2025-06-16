@@ -36,6 +36,10 @@ input, button {
   flex: 1;
 }
 
+button {
+  cursor: pointer;
+}
+
 #expense-list {
   list-style: none;
   padding: 0;
@@ -56,6 +60,20 @@ input, button {
 
 .expense-item.expense {
   border-color: red;
+}
+
+.filter-section {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-section label {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 600px) {
